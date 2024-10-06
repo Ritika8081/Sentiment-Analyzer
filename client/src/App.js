@@ -10,7 +10,9 @@ const App = () => {
 
   const fetchQuote = async () => {
     try {
-      const response = await fetch("http://localhost:3000/getQuote"); // Fetch from your backend
+      const response = await fetch(
+        "https://sentiment-analyzer-backend.vercel.app/api/getQuote"
+      ); // Fetch from your backend
       const data = await response.json(); // Parse the JSON response
 
       setQuote(data.content); // Set the quote from the content field
